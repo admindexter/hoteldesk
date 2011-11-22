@@ -1,4 +1,20 @@
 Hoteldesk::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/accomodations"
+
+  get "pages/services"
+
+  get "pages/dining"
+
+  get "pages/groups"
+
+  get "pages/guide"
+
+  get "pages/specials"
+
+  get "pages/contact"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
