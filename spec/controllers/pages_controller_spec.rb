@@ -3,6 +3,12 @@ require 'spec_helper'
 describe PagesController do
   render_views
 
+  before(:each) do
+
+    @base_title = "HotelDesk Website and FrontDesk Manager App"
+
+  end
+
   describe "GET 'home'" do
     it "should be successful" do
       get 'home'
@@ -12,7 +18,7 @@ describe PagesController do
     it "should have the right title" do
       get 'home'
       response.should have_selector("title",
-                        :content => "HotelDesk Website and FrontDesk Manager App | Home")
+                                    :content => @base_title + " | Home")
     end
 
   end
@@ -26,7 +32,7 @@ describe PagesController do
     it "should have the right title" do
       get 'accomodations'
       response.should have_selector("title",
-                        :content => "HotelDesk Website and FrontDesk Manager App | Accomodations")
+                                    :content => @base_title + " | Accomodations")
     end
 
   end
@@ -40,7 +46,7 @@ describe PagesController do
     it "should have the right title" do
       get 'services'
       response.should have_selector("title",
-                        :content => "HotelDesk Website and FrontDesk Manager App | Services")
+                                    :content => @base_title + " | Services")
     end
 
   end
@@ -54,7 +60,7 @@ describe PagesController do
     it "should have the right title" do
       get 'dining'
       response.should have_selector("title",
-                        :content => "HotelDesk Website and FrontDesk Manager App | Dining")
+                                    :content => @base_title + " | Dining")
     end
 
   end
@@ -68,7 +74,7 @@ describe PagesController do
     it "should have the right title" do
       get 'groups'
       response.should have_selector("title",
-                        :content => "HotelDesk Website and FrontDesk Manager App | Groups")
+                                    :content => @base_title + " | Groups")
     end
 
   end
@@ -82,7 +88,7 @@ describe PagesController do
     it "should have the right title" do
       get 'guide'
       response.should have_selector("title",
-                        :content => "HotelDesk Website and FrontDesk Manager App | Guide")
+                                    :content => @base_title + " | Guide")
     end
 
   end
@@ -96,7 +102,7 @@ describe PagesController do
     it "should have the right title" do
       get 'specials'
       response.should have_selector("title",
-                        :content => "HotelDesk Website and FrontDesk Manager App | Specials")
+                                    :content => @base_title + " | Specials")
     end
 
   end
@@ -110,7 +116,7 @@ describe PagesController do
     it "should have the right title" do
       get 'contact'
       response.should have_selector("title",
-                        :content => "HotelDesk Website and FrontDesk Manager App | Contact")
+                                    :content => @base_title + " | Contact")
     end
 
   end
